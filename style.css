@@ -1,0 +1,876 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif; /* Consider using a modern, sleek font */
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Navigation Bar Styles */
+
+/* Nav Bar end */
+
+nav {
+    background-color: #333; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 70px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: #b88c7d;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white; /* Accent color matching the footer */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* side bar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 600px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+#hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('hero-image.jpg') no-repeat center center/cover; /* Example background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #b88c7d; /* Highlight color from footer */
+    text-transform: uppercase;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ddd; /* Light gray for text */
+}
+
+.btn-mine {
+    background-color: #b88c7d; /* Button with the highlight color */
+    color: #ddd; /* Dark text for contrast */
+    padding: 15px 30px;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.btn-mine:hover {
+    background-color: #fff; /* Lighter button on hover */
+    color: #b88c7d;
+}
+
+#hero img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 80px 20px;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    .btn-mine {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* Slider */
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+#img-slider {
+    padding: 20px 20px;
+    background-color: #f8f8f8; /* Light background to contrast with the dark footer */
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Dark text color for contrast */
+    text-align: center;
+    /* margin-bottom: 10px; */
+    height: fit-content;
+}
+
+#img-slider .header {
+    font-size: 2.5em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #b88c7d; /* Highlight color to match the footer */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+    border-radius: 10px; /* Rounded corners to match the overall theme */
+    overflow: hidden; /* To maintain the border radius on the images */
+}
+
+.mySlides img {
+    border-radius: 10px; /* Ensures the images inside the container also have rounded corners */
+}
+
+.slider-intro {
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px auto 40px;
+    max-width: 800px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Caption text */
+.text {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 12px 24px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 10px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 5%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #b88c7d; /* Highlight color for active and hover states */
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+
+#img-slider img{
+    width: 90vw;
+    height: 80vh;
+}
+
+@media (max-width: 768px) {
+    #img-slider .header {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        width: 90%;
+    }
+}
+
+/* Slider END */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Service Pricing Section */
+#services-section {
+    /* padding: 60px 20px; */
+    background-color: #333;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.pricing-header {
+    font-size: 36px;
+    /* margin-bottom: 40px; */
+    padding-top: 40px;
+    /* color: #008080; */
+    color: #b88c7d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* new */
+.services-pricing {
+    background-color: #333; /* Matches the dark background */
+    /* padding: 10vw; */
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 4vh;
+    padding-bottom: 7vh;
+    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat font */
+  }
+  
+  .services-pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .services-pricing li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px dotted #fff; /* Dotted line */
+  }
+  
+  .services-pricing span {
+    color: #fff; /* White text */
+    font-size: 16px;
+  }
+  
+  .services-pricing span:first-child {
+    margin-right: 20px; /* Space between the service and the price */
+  }
+
+  .btn-call {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Adjust the font family as needed */
+    color: #fff; /* White text color */
+    background-color: transparent;
+    border: 2px solid #b88c7d; /* Soft brownish border color */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-call:hover {
+    background-color: #b88c7d; /* Change background on hover */
+    color: #333; /* Change text color on hover */
+  }
+  
+
+  /* new */
+
+
+/* Booking Button */
+.btn-booking {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    background-color: #b88c7d;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 3px solid #b88c7d; /* Add black border */
+}
+
+.btn-booking:hover {
+    background-color: #fff; /* Optional: Change background color on hover */
+    color: #b88c7d; /* Optional: Change text color on hover */
+    border: 3px solid #b88c7d; /* Add black border */
+    scale: 1.05;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+/* Service-Pricing END */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #b88c7d;
+    text-transform: uppercase;
+}
+
+.footer-section p, 
+.footer-section ul, 
+.footer-section a {
+    margin: 0;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #b88c7d;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section .social-media a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer-section .social-media img {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.footer-section .social-media img:hover {
+    opacity: 0.7;
+}
+
+.footer-section .map iframe {
+    width: 100%;
+    height: 300px; /* Increased height for a larger map */
+    border: 0;
+    border-radius: 10px; /* Optional: rounded corners for a more polished look */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 40px;
+    }
+
+    .footer-section .map iframe {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Credit Section */
+#credit {
+    background-color: #222;
+    color: #aaa;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#credit p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#credit a {
+    color: #4169e1;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Oxanium', sans-serif;
+}
+
+#credit a:hover {
+    text-decoration: underline;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* About Us Section */
+.about-us-section {
+    background-image: url('assets/gQa1eCxY0w4e6jvFQEWu--1--hkkf8_4x-real-esrgan-x4-plus.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-color: #f8f8f8; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about-us h2 {
+    text-align: center;
+    color: #b88c7d; /* Highlight color */
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    background-color: whi;
+}
+
+#about-us .intro-text {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #555; /* Slightly darker text for contrast */
+    background-color: white;
+}
+
+.values-craftsmanship {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.values, .craftsmanship {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+#about-us h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#about-us p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.colour-change {
+    color: #b88c7d; 
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .values-craftsmanship {
+        flex-direction: column;
+    }
+
+    .values, .craftsmanship {
+        margin: 0 0 20px 0;
+    }
+
+    #about-us h3 {
+        text-align: center;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Contact us */
+
+/* Base Styles (Desktop/Large Screens) */
+.contact-section {
+    background-image: url('assets/gQa1eCxY0w4e6jvFQEWu--1--hkkf8_4x-real-esrgan-x4-plus.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 90vh;
+    position: relative;
+    overflow: hidden; /* Ensure no overflow from rounded corners */
+}
+
+.contact-container {
+    background-color: #fff; /* White background for the contact container */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2; /* Ensure it's above the background image */
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    color: #b88c7d; /* Royal Blue */
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-details p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-details a {
+    color: #b88c7d; /* Royal Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #333;
+}
+
+.contact-buttons {
+    margin-top: 30px;
+}
+
+.btn-contact {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background-color: #b88c7d; /* Royal Blue */
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid #b88c7d;
+}
+
+.btn-contact:hover {
+    background-color: #fff;
+    color: #b88c7d; /* Royal Blue */
+    border: 2px solid #b88c7d; /* Keeps the border color */
+}
+
+.location-notice {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2; /* Ensure it's above the background image */
+}
+
+.location, .notice {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 30vw;
+    height: 10vw;
+}
+
+.location i, .notice i {
+    color: #b88c7d; /* Royal Blue */
+    font-size: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.location p, .notice p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container h2 {
+        font-size: 28px;
+    }
+
+    .contact-container p {
+        font-size: 16px;
+    }
+
+    .contact-details p {
+        font-size: 18px;
+    }
+
+    .btn-contact {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .location-notice {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location, .notice {
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        /* font-size: 24px; */
+        width: 80vw;
+    }
+
+    .location, .notice {
+        width: 80vw;
+    }
+
+    .contact-container h2 {
+        font-size: 24px;
+    }
+
+    .contact-container p {
+        font-size: 14px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+
+    .contact-buttons {
+        margin-top: 20px;
+    }
+
+    .btn-contact {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin: 5px;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
